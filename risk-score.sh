@@ -54,6 +54,15 @@ echo "snyk monitor initiated."
 echo "Step 2: Waiting for $WAIT_TIME seconds for Snyk backend processing (Note: This duration is not guaranteed to be sufficient)..."
 sleep $WAIT_TIME
 
+# Fetch project details to get last tested date
+PROJECT_INFO=$(curl -s -X GET \
+  -H "Authorization: token $SNYK_API_TOKEN" \
+  -H "Accept: application/vnd.api+json" \
+  "https://api.snyk.io/rest/orgs/$ORG_ID/projects/$PROJECT_ID?version=$SNYK_API_VERSION")
+echo "$PROJECT_INFO" | jq '.'
+# SNAPSHOT_DATE=$(echo "$PROJECT_INFO" | jq -r '.data.attributes.lastTestedDate')
+# echo "Last Scan (snapshot) completed at: $SNAPSHOT_DATE"
+
 # Step 3
 echo "Step 3: Fetching issues and Risk Scores from Snyk API..."
 
