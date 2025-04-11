@@ -36,10 +36,10 @@ Setup
 
 Ensure the following tools are installed and available in your CI/CD environment's `PATH`:
 
--   [`jq`](https://www.google.com/search?q=%5Bhttps://jqlang.github.io/jq/download/%5D(https://jqlang.github.io/jq/download/)): Command-line JSON processor.
--   [`curl`](https://www.google.com/search?q=%5Bhttps://curl.se/%5D(https://curl.se/)): Command-line tool for transferring data with URLs.
--   [`snyk` CLI](https://www.google.com/search?q=%5Bhttps://docs.snyk.io/snyk-cli/install-or-update-the-snyk-cli%5D(https://docs.snyk.io/snyk-cli/install-or-update-the-snyk-cli)): Snyk Command Line Interface. Authenticate the CLI using `snyk auth`.
--   [`git`](https://www.google.com/search?q=%5Bhttps://git-scm.com/%5D(https://git-scm.com/)): Required to get the commit hash.
+-   [`jq`](https://jqlang.github.io/jq/download/)): Command-line JSON processor.
+-   [`curl`](https://curl.se/): Command-line tool for transferring data with URLs.
+-   [`snyk` CLI](https://docs.snyk.io/snyk-cli/install-or-update-the-snyk-cli): Snyk Command Line Interface. Authenticate the CLI using `snyk auth`.
+-   [`git`](https://git-scm.com): Required to get the commit hash.
 
 ### Configuration
 
